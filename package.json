@@ -1,0 +1,24 @@
+{
+  "name": "01_js30",
+  "version": "1.0.0",
+  "description": "js30天练习，第一天",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuilei5205189/01---JavaScript-Drum-Kit.git"
+  },
+  "author": "cuilei5205189",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cuilei5205189/01---JavaScript-Drum-Kit/issues"
+  },
+  "homepage": "https://github.com/cuilei5205189/01---JavaScript-Drum-Kit#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-watch": "^5.0.0"
+  }
+}
