@@ -58,29 +58,26 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-function playSound(e) {
-  // js如何选择css中的class，有几种选择方式
-const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
-if(!audio) return;
-// audio播放完，才能对下一次按键有反应，currentTime = 0可以，随时随时按键
-audio.currentTime = 0;
-audio.play();
-key.classList.add('playing');
-};
+  function playSound(e) {
+      // js如何选择css中的class，有几种选择方式
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+    if(!audio) return;
+    // audio播放完，才能对下一次按键有反应，currentTime = 0可以，随时随时按键
+    audio.currentTime = 0;
+    audio.play();
+    key.classList.add('playing');
+  };
 
-function removeTransition(e) {
-if (e.propertyName !== 'transform') return;
-console.log(e)
-this.classList.remove('playing');
- {
-
-}}
-const keys = document.querySelectorAll('.key');
-keys.forEach(key => key.addEventListener('transitionend',removeTransition));
-window.addEventListener('keydown',playSound);
-
-</script>
+  function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    console.log(e)
+    this.classList.remove('playing');
+  }
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitionend',removeTransition));
+  window.addEventListener('keydown',playSound);
+  </script>
 
 
 </body>
